@@ -1,0 +1,26 @@
+Monday(jan-10-2022)
+    - fixed authentication bugs
+    - team and dev meeting
+    - added http interceptor to add Authorization token
+
+Tuesday(jan-11-2022)
+    - fixed authentication bugs
+    - fixed user not redirected to sites list when site cache is missing
+
+Wednesday(jan-12-2022)
+    - created separate controller,dataservice and service for mobile in server
+    - created lookup, combobox and roocause lookup component
+    - upgraded from ionic 5 to ionic 6
+    - added http interceptor to add Authorization token
+
+Thursday(jan-13-2022)
+    - resolved case #16148 to fixed
+    - having problem reproducing case #14570
+    - resolved case #14570 to fixed
+    - resolved case #16107 to fixed
+
+Friday(jan-14-2022)
+    - improved mobile datepicker UI for better UX
+    - configuring github action to automate testing when someone pushed to the branch
+    - adding ESLint to the Ionic project
+    - changed serve option to lab

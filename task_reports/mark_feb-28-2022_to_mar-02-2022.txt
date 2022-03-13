@@ -1,0 +1,23 @@
+git commit -m "Fixe case #16331"
+
+
+Sunday(feb-27-2022)
+
+Monday(feb-28-2022)
+    - dev and team meeting
+
+Tuesday(mar-01-2022)
+    - leave
+
+Wednesday(mar-02-2022)
+    - upgraded server stimulsoft
+    - tested server side reports
+    - debugging case #16331 having problem on finding the root cause
+    - resolved case #16331 to fixed
+    - implementing TPC Details reordering
+
+Thursday(mar-03-2022)
+
+Friday(mar-04-2022)
+
+Saturday(mar-05-2022)

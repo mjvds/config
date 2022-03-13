@@ -1,0 +1,26 @@
+Monday(jan-31-2022)
+    - merged mobile/dev branch to beta/0.38
+    - test harry's push (login UI changes) on harry/mobile/dev
+    - fixed mobile cm list are still loaded when switch to another site
+    - merged harry/mobile/dev and mobile/dev branch
+
+Tuesday(feb-01-2022)
+    - debugging case #16217
+    - resolved case #16217 to fixed
+    - fixing recurrence schedule component month dropdown produce duplicate month when timezone is different
+    - fixed rescurrence schedule has duplicate month when timezone is different
+
+Wednesday(feb-02-2022)
+    - resolved case #16230 to fixed
+    - fixing mobile list multiple selection
+
+Thursday(feb-03-2022)
+    - fixing mobile list multiple selection
+    - has able to fix multiple selection list component
+    - applying data list selection on cm assined personnel list
+    - encountered a problem where i cant get the ion
+    - has able to fix the selecting of item
+
+Friday(feb-04-2022)
+    - Debugging case #16237
+    - I wasn't able to reproduct case #16237 in development but added a try catch to hide the error

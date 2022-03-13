@@ -1,0 +1,52 @@
+#! /bin/sh
+MONITOR=$(xrandr |grep ' connected' |grep 'HDMI' |awk '{print $1}')
+
+if [ $MONITOR = "HDMI-1" ]; then
+  xrandr --output HDMI-1 --primary &&
+  xrandr --output HDMI-1 --right-of eDP-1
+fi
+
+if [ $MONITOR = "HDMI-1" ]; then
+  sxhkd -c /home/$USER/.mark/config/sxhkd/sxhkdrc &
+  bspc monitor eDP-1 -d I II III IV V
+  bspc monitor HDMI-1 -d VI VII VIII IX X
+  feh --bg-fill /home/$USER/.mark/wallpaper/wallpaper2 --bg-fill /home/$USER/.mark/wallpaper/wallpaper
+else
+  sxhkd -c /home/$USER/.mark/config/sxhkd/sxhkdrc &
+  bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X
+  feh --bg-fill /home/$USER/.mark/wallpaper/wallpaper
+fi
+
+
+bspc config border_width         0
+bspc config window_gap           5
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config ignore_ewmh_focus    true
+bspc config single_monocle       true
+bspc config gapless_monocle      true
+# bspc config normal_border_color  "#3f3f56"
+# bspc config focused_border_color "#96A6D5"
+bspc config top_padding 5
+bspc config right_padding 5
+bspc config bottom_padding 5
+bspc config left_padding 5
+
+# app rules
+if [ "$MONITOR" = "HDMI-1" ]; then
+  bspc rule -a Chromium  		        desktop='^6' follow=true
+  bspc rule -a Spotify           		desktop='^7' follow=true
+  bspc rule -a "Microsoft Teams - Preview" 		desktop='^8' follow=true
+  bspc rule -a Transmission-gtk 		desktop='^9' follow=true
+  bspc rule -a Telegram          		desktop='^9' follow=true
+else
+  bspc rule -a Chromium  		        desktop='^1' follow=true
+  bspc rule -a Spotify           		desktop='^4' follow=true
+  bspc rule -a Transmission-gtk 		desktop='^5' follow=true
+  bspc rule -a Telegram          		desktop='^5' follow=true
+fi
+
+killall dunst; dunst &
+xset r rate 250 20 &
+picom --config /home/$USER/.mark/config/picom/picom.conf &
+polybar -c /home/$USER/.mark/config/polybar/config top

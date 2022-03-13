@@ -1,0 +1,69 @@
+! SXIV COLORS
+Sxiv.font:       FiraCode Nerd Font Mono:size=11
+Sxiv.background: #707480
+Sxiv.foreground: #fefefe
+
+! URxvt.font: xft:Monaco Nerd Font Mono:size=11
+URxvt.font: xft:FiraCode Nerd Font Mono:size=11
+URxvt.scrollBar: false
+URxvt.depth: 32
+! URxvt.background: [5]#404552
+URxvt.background: #404552
+URxvt.letterSpace: 0
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
+
+! Dracula Xresources palette
+URxvt.foreground: #F8F8F2
+URxvt.color0:     #000000
+URxvt.color8:     #4D4D4D
+URxvt.color1:     #FF5555
+URxvt.color9:     #FF6E67
+URxvt.color2:     #50FA7B
+URxvt.color10:    #5AF78E
+URxvt.color3:     #F1FA8C
+URxvt.color11:    #F4F99D
+URxvt.color4:     #BD93F9
+URxvt.color12:    #CAA9FA
+URxvt.color5:     #FF79C6
+URxvt.color13:    #FF92D0
+URxvt.color6:     #8BE9FD
+URxvt.color14:    #9AEDFE
+URxvt.color7:     #BFBFBF
+URxvt.color15:    #E6E6E6
+
+!Tokyo Night theme
+! general
+/* st.font:	FiraCode Nerd Font Mono:pixelsize=18:antialias=true:autohint=true; */
+/* st.font:	Liberation Mono:pixelsize=11:antialias=true:autohint=true; */
+st.font:	Liberation Mono:pixelsize=17:antialias=true:autohint=true;
+/* st.foreground: #a9b1d6 */
+st.background: #1a1b26
+st.cursorColor: #a9b1d6
+! terminal padding color
+st.borderColor: #1a1b26
+! black
+st.color0: #1a1b26
+st.color8: #4e5173
+! red
+st.color1: #F7768E
+st.color9: #F7768E
+! green
+st.color2: #9ECE6A
+st.color10: #9ECE6A
+! yellow
+st.color3: #E0AF68
+st.color11: #E0AF68
+! blue
+st.color4: #7AA2F7
+st.color12: #7AA2F7
+! magenta
+st.color5: #9a7ecc
+st.color13: #9a7ecc
+! cyan
+st.color6: #4abaaf
+st.color14: #4abaaf
+! white
+st.color7: #acb0d0
+st.color15: #acb0d0
+! Tokyo Night theme ends

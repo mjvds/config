@@ -1,0 +1,87 @@
+============= INTRODUCTION =============
+First of all I wanted to thank you for considering me at this stage of the interview and I just wanna apologize in advance since I am really not used to interviews. 
+
+I've been with my current company for 5 years now and this is my first time to be exploring so I'm really new at this. 
+
+I can say I am dependable, loyal and passionate at what I do. I work the extra mile because even during my free time, I find myself doing stuff that is related to my job. 
+
+Even though I am not the most conversational candidate on the list I can guarantee that I have the qualities of a person who is humble, loyal, and is eager to learn.
+
+============= ABOUT ME =============
+Cybermetrics:
+  Software solution company based in arizona usa
+
+About my self:
+  Hi, I'm Mark Jay Delos Santos from Santa Ana Pampanga graduated is STI San Fernando pampanga.
+  Where I develop a e-commerce web application written in AngularJS and Laravel5 for my thesis.
+  I started off my career as a front end developler 5 years ago with rp software where i performed bug fixing
+  implementing features, after 2 years a moved as a freelance with CyberMetrics. where i migrate our app written in AngularJS to Angular and Asp.net core in this role my Major accomplishment is i was able to optimize our client side application and server side.
+
+what value should i bring to the table:
+  I have more that 5 years experience in front end development.
+  I Have passion in writing readable and optimized code and I love to learn more technologies related in Front End Development.
+
+what im looking for:
+  Is a company that i could add value to. that i could produce a positive return on investment for.
+
+Weaknesess:
+  One of my weaknessess is im more of an introvert and sometimes i notice that i am shy to share my ideas when there's a root of people.
+
+Strength:
+  - Enjoys Software development and writing code.
+  - Passioned about maintaining quality, secure and performace optimized code.
+
+Role with RP Software:
+  Since I'm new in Front End Development Bug Fixing 
+Role as a freelance:
+  Bug Fixing, Checking if the features ask by the client is feasible then i will create a Proof of Concept after i successfully created it. I will Implementing the feature in our Web application.
+  Developing mobile version of our web application written in Ionic Framework.
+
+CMMS: (Computerized Maintenance Managerment System)
+ - Schedule Maintenance
+ - Track Maintenance
+ - Organize Maintenance
+ - Maintain facilities, equipment and tools
+
+TDD: (Test driven development)
+ - Reduce bug.
+ - Improve Maintainability
+ - Teach you in you code in unexpected way.
+
+TECH STACKS:
+ - AngularJS
+ - Angular 2 higher
+ - HTML5
+ - CSS3, SASS
+ - ASP.NET core
+ - linux, linux command
+ - JavaScript es5 and es6
+ - Typescript
+ - Ionic Framework
+ - Jasmine and Karma
+ - Angular Material
+ - Git
+ - Bash Scripting
+ - NGINX
+ - Grunt
+
+- REST API
+  -  Representational state transfer (ex. google map api, facebook graph api)
+- STATEMANAGEMENT
+  - It is a state management system based on the Redux pattern
+  - The management of the state of one or more user interface controls such as text fields, OK buttons, radio buttons, etc. in a graphical user interface. In this user interface programming technique, the state of one UI control depends on the state of other UI controls.
+
+============= CLIENT =============
+client: https://bbtdigital.com/;
+interviewer: Jenika Team Lead
+about: Founded in 2014
+services: Providing Digital Advertising, Online Marketing, Website Development, Adwords (SEM), Search Engine Optimisation, Mobile Apps, Design, UI/UX, Software Development, and CRO
+
+
+
+============= Faciliworks =============
+about: CyberMetrics software solutions. over thousand facilities worldwide use our software to manage their assets, calibrations and preventative maintenance while maintaining standards compliance and minimizing costs.
+softwares: GAGETRACK (Calibration Management Softare)
+           Faciliworks (Maintenance Managerment Software)
+services: provide a remote or on-site assessment of your maintenance management program, Training for our new client, Custom reports if a client want additional data in report
+

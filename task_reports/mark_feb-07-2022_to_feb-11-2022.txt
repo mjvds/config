@@ -1,0 +1,23 @@
+Monday(feb-07-2022)
+    - merged mobile/dev branch to beta/0.38
+    - test harry's push (login UI changes) on harry/mobile/dev
+    - fixed mobile cm list are still loaded when switch to another site
+    - merged harry/mobile/dev and mobile/dev branch
+
+Tuesday(feb-08-2022)
+    - Sick leave
+
+Wednesday(feb-09-2022)
+    - Sick leave
+
+Thursday(feb-10-2022)
+    - fixing page footer positioning below header when window is resized
+    - fixed page footer positioning below header when window is resized
+    - resolved case #16245 to fixed
+    - resolved case #16236 to fixed
+
+Friday(feb-11-2022)
+    - fixing mobile list selection bug where user cannot refresh
+    - fixing combobox and lookup background color in IOS and android
+    - debugging case #16263
+    - having a difficulty on finding the root cause of the case #16263

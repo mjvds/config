@@ -1,0 +1,31 @@
+Monday(feb-14-2022)
+    - debugging datagrid column chooser popup to show close button
+    - dev and team meeting
+    - debugging datagrid column chooser popup to show close button
+    - found a fix for the case #16273 by hiding column chooser cancel button and setting column chooser popup option showCloseButton to true
+
+Tuesday(feb-15-2022)
+    - trying to reproduce case #16263
+    - resolved case #16263 to not reproduce
+    - upgrading stimulsoft to 2022.1.6 (latest version)
+    - upgraded stimulsoft to 2022.1.6 (latest version)
+    - improve data list selection on mobile
+    - fixed mobile cm part unassignment bug
+
+Wednesday(feb-16-2022)
+    - merged harry/mobile/dev branch
+    - implementing pm mobile list 
+    - implementing pm mobile information tab
+    - adding spanish localization in pm list and pm detail information
+
+Thursday(feb-17-2022)
+    - debugging case #16293 by removing caching in calendar component
+    - resolved case #16293 to fixed
+    - resolved case #16245 to fixed
+
+Friday(feb-18-2022)
+    - resolved case #14779 to fixed
+    - implementing PM list, PM Information, Personnel and Parts tab
+    - implementing PM list, PM Information, Personnel and Parts tab assignment and unassignment
+    - implementing PM list, PM Information, Personnel and Parts tab assig information edit
+    - fixing mobile test cases

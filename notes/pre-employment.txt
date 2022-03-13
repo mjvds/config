@@ -1,0 +1,41 @@
+=============== HAVE ===============
+❑ photocopy of sss id or e1
+❑ photocopy of tin id
+❑ photocopy of philhealth id/registration
+❑ birth certificate
+❑ diploma/transcript of records
+
+=============== DONT HAVE ===============
+❑ photocopy of hdmf id/registration
+❑ photocopy of latest bir 2316 / waiver
+❑ 1905 form (rdo transfer) place of residency
+❑ nbi clearance or police clearance
+❑ birth certificate of dependents (if any)
+❑ one (1) pc of 2x2 id picture (white background)
+❑ consent to use images and videos for internal documentations, marketing and social media purposes
+❑ Consent to Hold Personal Information
+
+=============== NOT REQUIRED IF FREELANCE ===============
+❑ certificate of employment from previous employer
+
+=============== NOT REQUIRED ===============
+❑ marriage certificate (if applicable)
+
+=============== BASIC REQUIREMENTS ===============
+[✓] Photocopy of SSS ID or E1
+[✓] Photocopy of TIN ID
+[ ] Photocopy of HDMF ID/Registration
+[✓] Photocopy of Philhealth ID/Registration
+[X] Photocopy of latest BIR 2316 / Waiver
+[ ] 1905 Form (RDO transfer) place of residency
+[✓] NBI Clearance or Police Clearance
+[X] Certificate of Employment from previous employer
+[✓] Diploma/Transcript of Records
+[X] Birth Certificate
+[✓] Birth Certificate of dependents (if any)
+[✓] One (1) pc of 2x2 ID picture (white background)
+[✓] Consent To Use Images and Videos for Internal Documentations, Marketing and Social Media Purposes
+[✓] Consent to Hold Personal Information
+
+=============== ATM REQUIREMENTS ===============
+[✓] Photocopy of two (2) valid IDs

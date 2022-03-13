@@ -1,0 +1,88 @@
+set show-mode-in-prompt on
+
+set vi-ins-mode-string " \1\e[0;37m\2└─● \1\e[0;37m\2"
+set vi-cmd-mode-string " \1\e[0;37m\2└─■ \1\e[0;37m\2"
+# └─╼
+ # /etc/inputrc - global inputrc for libreadline
+ # See readline(3readline) and `info rluserman' for more information.
+
+ # Be 8 bit clean.
+ set input-meta on
+ set output-meta on
+
+ #vi mode
+ $if mode=vi
+     set keymap vi-command
+     Control-l: clear-screen
+     "#": insert-comment
+     ".": "i !*\r"
+     "|": "A | "
+     "D":kill-line
+     "C": "Da"
+     "dw": kill-word
+     "dd": kill-whole-line
+     "db": backward-kill-word
+     "cc": "ddi"
+     "cw": "dwi"
+     "cb": "dbi"
+     "daw": "lbdW"
+     "yaw": "lbyW"
+     "caw": "lbcW"
+     "diw": "lbdw"
+     "yiw": "lbyw"
+     "ciw": "lbcw"
+     "da\"": "lF\"df\""
+     "di\"": "lF\"lmtf\"d`t"
+     "ci\"": "di\"i"
+     "ca\"": "da\"i"
+     "da'": "lF'df'"
+     "di'": "lF'lmtf'd`t"
+     "ci'": "di'i"
+     "ca'": "da'i"
+     "da`": "lF\`df\`"
+     "di`": "lF\`lmtf\`d`t"
+     "ci`": "di`i"
+     "ca`": "da`i"
+     "da(": "lF(df)"
+     "di(": "lF(lmtf)d`t"
+     "ci(": "di(i"
+     "ca(": "da(i"
+     "da)": "lF(df)"
+     "di)": "lF(lmtf)d`t"
+     "ci)": "di(i"
+     "ca)": "da(i"
+     "da{": "lF{df}"
+     "di{": "lF{lmtf}d`t"
+     "ci{": "di{i"
+     "ca{": "da{i"
+     "da}": "lF{df}"
+     "di}": "lF{lmtf}d`t"
+     "ci}": "di}i"
+     "ca}": "da}i"
+     "da[": "lF[df]"
+     "di[": "lF[lmtf]d`t"
+     "ci[": "di[i"
+     "ca[": "da[i"
+     "da]": "lF[df]"
+     "di]": "lF[lmtf]d`t"
+     "ci]": "di]i"
+     "ca]": "da]i"
+     "da<": "lF<df>"
+     "di<": "lF<lmtf>d`t"
+     "ci<": "di<i"
+     "ca<": "da<i"
+     "da>": "lF<df>"
+     "di>": "lF<lmtf>d`t"
+     "ci>": "di>i"
+     "ca>": "da>i"
+     "gg": beginning-of-history
+     "G": end-of-history
+     ?: reverse-search-history
+     /: forward-search-history
+     set keymap vi-insert
+     Control-l: clear-screen
+     "\C-a": beginning-of-line
+     "\C-e": end-of-line
+     "\e[A": history-search-backward
+     "\e[B": history-search-forward
+ $endif

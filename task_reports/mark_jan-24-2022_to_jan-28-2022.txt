@@ -1,0 +1,26 @@
+Monday(jan-24-2022)
+    - implementing custom cm parts assignment and unassignment widget
+    - team and dev meeting
+    - implementing custom cm parts assignment and unassignment widget
+
+Tuesday(feb-25-2022)
+    - fixed mobile project packages and package versions related to angular and ionic
+    - remove angular animation as a dependency for mobile and planning to use ionic animation builder
+
+Wednesday(feb-26-2022)
+    - fixed mobile project packages and package versions related to angular and ionic
+    - removing devextreme as a dependency since its causes UI lag
+    - implementing virtual scrolling using angular cdk scrolling
+
+Thursday(feb-27-2022)
+    - implementing custom selection for virtual scroll
+    - implementing custom selection for virtual scroll
+    - improve list selection performance by using virtual scrolling
+    - removing devextreme and devextreme angular as a dependencies to improve app performance
+    - implement virtual scrolling selection
+
+Friday(feb-28-2022)
+    - resolved case #16193 to fixed
+    - resolved case #16191 to fixed
+    - resolved case #11152 to fixed
+    - continue on implementing custom selection for custom virtual scroll list in cm list

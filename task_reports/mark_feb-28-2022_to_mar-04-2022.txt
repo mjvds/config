@@ -1,0 +1,23 @@
+Monday(feb-28-2022)
+    - implementing pm TPC details
+    - dev and team meeting
+    - implementing pm TPC details
+
+Tuesday(mar-01-2022)
+    - leave
+
+Wednesday(mar-02-2022)
+    - upgraded server stimulsoft
+    - tested server side reports
+    - debugging case #16331 having problem on finding the root cause
+    - resolved case #16331 to fixed
+    - implementing TPC Details reordering
+
+Thursday(mar-03-2022)
+    - implementing TPC Details reordering
+
+Friday(mar-04-2022)
+    - debugging case #16293
+    - having a difficulty on finding the root cause of the bug
+    - implementing checklist module
+    - upgrading to devextreme latest version

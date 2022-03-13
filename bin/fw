@@ -1,0 +1,33 @@
+#!/bin/bash
+
+root_dir="/home/$USER/Coding/Projects/"
+
+if [ "$1" == "vim" ]; then
+  target_dir=$2
+  if [ -d "$root_dir$target_dir" ]; then
+    site_dir="src/Web/CyberMetrics.FaciliWorks.NetCore.Site/wwwroot"
+    cd "$root_dir$target_dir/$site_dir" && nvim .
+  else
+    echo "$root_dir$target_dir dont exists!"
+  fi
+fi
+
+if [ "$1" == "cd" ]; then
+  if [ "$2" == "root" ]; then
+    cd "$(git rev-parse --show-toplevel)"
+  elif [ "$2" == "site" ]; then
+    cd "$(git rev-parse --show-toplevel)" && cd "src/Web/CyberMetrics.FaciliWorks.NetCore.Site/wwwroot"
+  elif [ "$2" == "api" ]; then
+    cd "$(git rev-parse --show-toplevel)" && cd "src/Web/CyberMetrics.FaciliWorks.NetCore.API"
+  elif [ "$2" == "is" ]; then
+    cd "$(git rev-parse --show-toplevel)" && cd "src/Web/CyberMetrics.FaciliWorks.NetCore.IdentityServer"
+  elif [ "$2" == "mob" ]; then
+    cd "$(git rev-parse --show-toplevel)" && cd "src/Web/CyberMetrics.FaciliWorks.NetCore.Mobile"
+  else
+    if [ -d "/home/$USER/Coding/Projects/$2" ]; then
+      cd "/home/$USER/Coding/Projects/$2"
+    else
+      echo "/home/$USER/Coding/Projects/$2 dont exists"
+    fi
+  fi
+fi

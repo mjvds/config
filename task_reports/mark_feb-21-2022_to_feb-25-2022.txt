@@ -1,0 +1,26 @@
+Monday(feb-21-2022)
+    - dev and team meeting
+    - fixing buttons UI issue when upgrading devextreme theme
+    - resolved case #16309 to fixed
+    - Upgrading devextreme to latest version
+
+Tuesday(feb-22-2022)
+    - debugging case #16314
+    - having a difficulty to find the cause of case #16314
+    - resolved case #16314 to fixed
+    - resolved case #13066 to fixed
+
+Wednesday(feb-23-2022)
+    - fixed organization sites error when data is loaded
+    - fixed organization sites add form save/undo buttons are not enabling
+
+Thursday(feb-24-2022)
+    - resolved case #16232 to fixed
+    - implementing pm checklist
+
+Friday(feb-25-2022)
+    - implementing pm checklist
+    - improving controls styling
+    - improving data list api
+
+Saturday(feb-26-2022)

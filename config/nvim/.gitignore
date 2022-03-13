@@ -1,0 +1,5 @@
+notes
+plugins
+plugin/packer_compiled.vim
+.*
+!.gitignore

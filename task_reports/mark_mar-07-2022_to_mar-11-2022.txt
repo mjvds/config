@@ -1,0 +1,18 @@
+Monday(mar-07-2022)
+    - Leave
+
+Tuesday(mar-08-2022)
+    - Implementing mobile checklist module client side and server side
+
+Wednesday(mar-09-2022)
+    - Debugging case #16359
+    - resolved case #16359 to fixed
+    - resolved case #16348 to fixed
+
+Thursday(mar-10-2022)
+    - resolved case #16337 to fixed
+    - resolved case #16350 to fixed
+    - resolved case #16335 to fixed
+
+Friday(mar-11-2022)
+    - Implementing mobile checklist module client side and server side

@@ -1,0 +1,50 @@
+
+search Sti
+search In
+search Re
+search Mode
+shell touch TPCMobileReorder.cs
+shell ng g s user
+open_with%spacea
+shell mkdir -p assets/img
+rename 12.png
+rename 30.png
+rename 31.png
+rename 59.png
+rename 71.png
+rename 73.png
+rename 85.png
+rename 87.png
+rename 88.png
+rename 91.png
+rename 94.png
+rename 99.png
+rename 101.png
+rename 112.png
+rename 124.png
+rename 142.png
+rename 152.png
+rename 141.png
+rename 150.png
+rename 151.png
+touch 
+shell ionic g c pm-detail-checklist-add --flat
+shell mkdir pm-detail-checklist-add
+search admi
+search core
+search model
+shell touch TPCMobile.cs
+search TPC
+open_with nvim
+shell mkdir pm-detail-checklist-detail-edit
+shell ionic g c pm-detail-checklist-detail-edit
+rename ordersjkk
+shell ionig g page area-manager
+shell ionic g page area-manager
+shell mkdir register
+shell ng g m 
+shell ng g m register --flat
+shell ng g c register --flat
+shell 
+rename register-routing.module.ts
+delete

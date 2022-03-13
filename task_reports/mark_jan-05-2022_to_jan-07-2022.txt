@@ -1,0 +1,30 @@
+git commit -m "Fixe case #16103 ,#16126 ,#16120"
+
+
+Sunday(jan-02-2022)
+
+Monday(jan-03-2022)
+
+Tuesday(jan-04-2022)
+
+Wednesday(jan-05-2022)
+    - writing a unit test for sites service and app guard
+    - fixed site redirect after user logged in.
+    - fixed site is not loading when site page initial render
+    - fixed OAuth2 token refresh.
+
+Thursday(jan-06-2022)
+    - implemented cm information fetching data
+    - created a component for lookup
+    - implemented http interceptor that will add Authorization header for every http calls
+    - implementing date input
+    - testing newly create lookup component and service
+
+Friday(jan-07-2022)
+    - having a problem in finding the root cause of the case #16103
+    - resolved case #16103 to fixed
+    - having a problem in finding the root cause of the case #16126
+    - resolved case #16126 to fixed
+    - resolved case #16120 to fixed
+
+Saturday(jan-08-2022)
