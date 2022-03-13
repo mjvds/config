@@ -1,5 +1,3 @@
-
-search Sti
 search In
 search Re
 search Mode
@@ -47,4 +45,6 @@ shell ng g m register --flat
 shell ng g c register --flat
 shell 
 rename register-routing.module.ts
+open_with vi
 delete
+d

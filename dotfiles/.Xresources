@@ -35,8 +35,8 @@ URxvt.color15:    #E6E6E6
 !Tokyo Night theme
 ! general
 /* st.font:	FiraCode Nerd Font Mono:pixelsize=18:antialias=true:autohint=true; */
-/* st.font:	Liberation Mono:pixelsize=11:antialias=true:autohint=true; */
-st.font:	Liberation Mono:pixelsize=17:antialias=true:autohint=true;
+st.font:	Liberation Mono:pixelsize=11:antialias=true:autohint=true;
+/* st.font:	Liberation Mono:pixelsize=17:antialias=true:autohint=true; */
 /* st.foreground: #a9b1d6 */
 st.background: #1a1b26
 st.cursorColor: #a9b1d6

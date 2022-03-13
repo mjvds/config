@@ -51,8 +51,8 @@ if [ $TERM != "linux" ]; then
 fi
 
 # export FW_REPO_URL="https://cybermetrics.kilnhg.com/Code/AMDRepositories/Group/FaciliWorks-Lite.git"
-export FW_TOKEN="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"
-export FW_REPO_URL="https://marksantos002219:$FW_TOKEN@github.com/CybermetricsCorp/FaciliWorks-9.git"
+# export FW_TOKEN="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"
+# export FW_REPO_URL="https://marksantos002219:$FW_TOKEN@github.com/CybermetricsCorp/FaciliWorks-9.git"
 # export WIN_DOC="/mnt/c/Users/rpdev/Documents"
 # export FW_SITE_PATH="src/Web/CyberMetrics.FaciliWorks.NetCore.Site/wwwroot"
 

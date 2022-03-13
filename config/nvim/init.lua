@@ -127,6 +127,21 @@ local function startup()
     end
   }
 
+  use {
+    'APZelos/blamer.nvim',
+    opt = true,
+    ft = {
+      "javascript",
+      "typescript",
+      "json",
+      "markdown",
+      "html",
+      "css",
+      "scss",
+      "lua"
+    }
+  }
+
 end
 
 require 'packer'.startup(startup)

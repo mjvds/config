@@ -30,7 +30,7 @@ light = #414141
 green = #00FF00
 
 [bar/top]
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:DP-1}
 width = 100%
 height = 27
 ;offset-x = 1%
@@ -58,8 +58,8 @@ font-1 = "Material Design Icons:pixelsize=13;3"
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm title
-modules-center = 
-modules-right = date backlight alsa eth wlan memory cpu battery temperature
+modules-center = date 
+modules-right = backlight alsa eth wlan memory cpu battery temperature
 
 tray-position = right
 tray-padding = 2
@@ -222,7 +222,7 @@ ramp-signal-foreground = ${colors.foreground}
 
 [module/eth]
 type = internal/network
-interface = eth0
+interface = enp0s31f6
 interval = 3.0
 
 format-connected-prefix = "󰈁"
