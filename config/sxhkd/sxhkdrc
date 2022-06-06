@@ -137,7 +137,13 @@ XF86AudioMute
   pactl set-sink-mute 0 toggle
   
 Print
-  maim ~/Pictures/Screenshot/SS-$(date +%m-%d-%Y-%I%M%S).png
+  flameshot gui -p ~/Pictures/Screenshot/$(date "+%m-%d-%G-%I-%M-%S%p")
 
 shift + Print
-  maim -s ~/Pictures/Screenshot/SS-$(date +%m-%d-%Y-%I%M%S).png
+  flameshot gui -c
+
+super + alt + o
+  flameshot gui -p ~/Pictures/Screenshot/$(date "+%m-%d-%G-%I-%M-%S%p")
+
+super + alt + p
+  flameshot gui -c

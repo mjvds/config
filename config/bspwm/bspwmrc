@@ -2,14 +2,14 @@
 MONITOR=$(xrandr |grep ' connected' |grep 'HDMI' |awk '{print $1}')
 
 if [ $MONITOR = "HDMI-2" ]; then
-  xrandr --output HDMI-2 --primary &&
-  xrandr --output HDMI-2 --left-of DP-1
+  xrandr --output DP-1 --primary &&
+  xrandr --output DP-1 --left-of HDMI-2
 fi
 
 if [ $MONITOR = "HDMI-2" ]; then
   sxhkd -c /home/$USER/.mark/config/sxhkd/sxhkdrc &
-  bspc monitor DP-1 -d I II III IV V
-  bspc monitor HDMI-2 -d VI VII VIII IX X
+  bspc monitor HDMI-2 -d I II III IV V
+  bspc monitor DP-1 -d VI VII VIII IX X
   feh --bg-fill /home/$USER/.mark/wallpaper/wallpaper2 --bg-fill /home/$USER/.mark/wallpaper/wallpaper
 else
   sxhkd -c /home/$USER/.mark/config/sxhkd/sxhkdrc &
@@ -46,7 +46,8 @@ else
   bspc rule -a Telegram          		desktop='^5' follow=true
 fi
 
+flameshot &
 killall dunst; dunst &
-xset r rate 250 20 &
+xset r rate 220 20 &
 picom --config /home/$USER/.mark/config/picom/picom.conf &
 polybar -c /home/$USER/.mark/config/polybar/config top

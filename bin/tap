@@ -1,0 +1,12 @@
+#!/bin/bash
+
+OPTION=$1
+
+BRANCH_NAME=$(git symbolic-ref -q HEAD)
+BRANCH_NAME=${branch_name##refs/heads/}
+BRANCH_NAME=${branch_name:-HEAD}
+
+if [ "$OPTION" = "push" ]; then
+  OUTPUT=$(git push origin $BRANCH_NAME)
+  echo $OUTPUT >> sample.txt
+fi

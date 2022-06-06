@@ -87,7 +87,7 @@ function _G.my_statusline(inactive)
                     "%#MyStatusItemDiagInfo#" .. get_info() ..
                     "%#MyStatusItemDiagHint#" .. get_hint()
     end
-    return "%#MyStatusItem# %y %t %*" ..
+    return "%#MyStatusItem# %y %F %*" ..
            "%#MyStatusItem# %p%% %*" ..
            "%#MyStatusItem# %l/%c %*" ..
            "%#MyStatusItem#%*" ..
@@ -96,5 +96,6 @@ function _G.my_statusline(inactive)
   end
 end
 
+C('set laststatus=3')
 C('autocmd WinEnter,BufEnter * setlocal statusline=%!v:lua.my_statusline()')
 C('autocmd WinLeave,BufLeave * setlocal statusline=%!v:lua.my_statusline(1)')

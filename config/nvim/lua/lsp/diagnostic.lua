@@ -175,6 +175,13 @@ do
 
   function M.goto_next()
     if api.nvim_get_var(var.qf_buf_target) == 0 then
+      if #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR }) >= 1 then
+
+        return vim.diagnostic.goto_next({
+          float = false,
+          severity = vim.diagnostic.severity.ERROR
+        })
+      end
       vim.diagnostic.goto_next({ float = false })
     else
       api.nvim_command('cnext')
@@ -183,6 +190,13 @@ do
 
   function M.goto_prev()
     if api.nvim_get_var(var.qf_buf_target) == 0 then
+      if #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR }) >= 1 then
+
+       return vim.diagnostic.goto_prev({
+         float = false,
+         severity = vim.diagnostic.severity.ERROR
+       })
+      end
       vim.diagnostic.goto_prev({ float = false })
     else
       api.nvim_command('cprev')

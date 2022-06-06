@@ -26,6 +26,7 @@ C("hi LspSignatureActiveParameter cterm=bold")
 C("hi MyFloatingPreviewBorder ctermbg=237 ctermfg=233")
 
 C('hi LspSignatureActiveParameter cterm=underline')
+C('hi WinSeparator guibg=none guifg=gray')
 
 require 'statusline.my_statusline'
 require 'tabline.tabline'

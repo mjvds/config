@@ -1,50 +1,50 @@
-search In
-search Re
-search Mode
-shell touch TPCMobileReorder.cs
-shell ng g s user
-open_with%spacea
-shell mkdir -p assets/img
-rename 12.png
-rename 30.png
-rename 31.png
-rename 59.png
-rename 71.png
-rename 73.png
-rename 85.png
-rename 87.png
-rename 88.png
-rename 91.png
-rename 94.png
-rename 99.png
-rename 101.png
-rename 112.png
-rename 124.png
-rename 142.png
-rename 152.png
-rename 141.png
-rename 150.png
-rename 151.png
-touch 
-shell ionic g c pm-detail-checklist-add --flat
-shell mkdir pm-detail-checklist-add
-search admi
-search core
-search model
-shell touch TPCMobile.cs
-search TPC
+shell jk
+shell ng g m input
+shell ng g c input --flat
+shell touch util.interface.ts
+shell touch validation-message.config.ts
+shell ng g m input-address
+shell ng g c input-address --flat
+shell ng g s input-address
+shell touch input-address.config.ts
+search mort
+search crt
+search 
+search invi
+shell mkdir state
+shell ng g s crt-invite-cp
 open_with nvim
-shell mkdir pm-detail-checklist-detail-edit
-shell ionic g c pm-detail-checklist-detail-edit
-rename ordersjkk
-shell ionig g page area-manager
-shell ionic g page area-manager
-shell mkdir register
-shell ng g m 
-shell ng g m register --flat
-shell ng g c register --flat
-shell 
-rename register-routing.module.ts
-open_with vi
+shell touch cp_notes.txt
+rename loader.component.html
+rename loader.module.ts
+rename loader.component.ts
+rename loader.component.spec.ts
+rename loader.component.scss
+rename button
+rename button.component.html
+rename button.module.ts
+rename button.component.ts
+rename button.component.spec.ts
+rename button.component.scss
+rename tap-customer-portal_fix
+shell ng g s dashboard-tab
+shell touch section-code.ts
+shell ng g m input-chips
+shell ng g c input-chips --flat
+shell ng g m login
+shell ng g c login --flat
+rename login-routing.module.ts
+shell touch business.interface.ts
+shell ng g m login-redirect
+shell ng g c login-redirect --flat
+shell rename login-routing.module.ts login-redirect-routing.module.ts
+shell mv login-routing.module.ts login-redirect-routing.module.ts
+shell ng g guards login
+shell ng g guard login
+shell ng g interceptor api-url
 delete
-d
+shell touch http.context.ts
+search select
+shell touch advice-process.interface.ts
+shell 
+shell touch dashboard-tab.interface.ts

@@ -71,7 +71,7 @@ local function on_attach(client, bufnr)
 
 end
 
-local SERVERS = { "jsonls", "omnisharp", "tsserver" }
+local SERVERS = { "jsonls", "omnisharp", "tsserver", "angularls" }
 function M.configure()
   -- vim.lsp.set_log_level 'trace'
   for _, server in ipairs(SERVERS) do

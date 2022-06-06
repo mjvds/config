@@ -107,7 +107,7 @@ local function startup()
   use {
     'neovim/nvim-lsp',
     opt = true,
-    ft = { 'typescript', 'javascript', 'dart', 'json', 'cs', 'sh' , 'lua' },
+    ft = { 'typescript', 'javascript', 'dart', 'json', 'cs', 'sh' , 'lua', 'html' },
     config = function()
       if not vim.wo.diff then
         require 'lsp.config'.configure()
@@ -139,7 +139,25 @@ local function startup()
       "css",
       "scss",
       "lua"
-    }
+    },
+    config = function()
+      vim.g.blamer_enabled = 1
+    end
+  }
+
+  use {
+    'dense-analysis/ale',
+    opt = true,
+    ft = {
+      "typescript",
+      "javascript"
+    },
+    config = function()
+      vim.g.ale_disable_lsp = 1
+      vim.g.ale_set_highlights = 1
+      vim.g.ale_sign_error = ''
+      vim.g.ale_sign_warning = ''
+    end
   }
 
 end

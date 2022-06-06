@@ -92,12 +92,6 @@ export CAPACITOR_ANDROID_STUDIO_PATH=/opt/android-studio/bin/studio.sh
 # execute vim/nvim command
 # since we are using custom directory for our config files
 export EXINIT="luafile /home/$USER/.mark/config/nvim/init.lua"
-# add vim runtimepath
-# export VIMRUNTIME=/usr/share/nvim/runtime
-# export MYVIMRC=/home/$USER/.mark/config/nvim/init.lua
-# export VIM=/home/$USER/.mark/config/nvim
-# export XDG_CONFIG_HOME=/home/$USER/.mark/config
-# export XDG_CONFIG_DIRS=/home/$USER/.config,/home/$USER/.mark/config
 
 alias install-packer="git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim"
 
@@ -118,5 +112,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 alias pac-orphans='pacman -Qtdq'
 alias reflector-update='sudo reflector --sort rate --save /etc/pacman.d/mirrorlist --protocol https,http --latest 10 --verbose'
+
+alias neofetch='neofetch --config ~/.mark/config/neofetch/config.conf'
 
 # export MONITOR2=$(xrandr |grep ' connected' |grep 'HDMI' |awk '{print $1}')
