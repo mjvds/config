@@ -1,0 +1,50 @@
+shell ionic g s dashboard
+shell ionic g c order-form-payment
+rename vetmate_update
+filter qq
+d
+search util
+shell touch checklist.calculation.ts
+shell touch _select.scss
+shell touch _ion-select.scss
+search file-sa
+
+search Andoird
+search string
+shell ionic g m lookup-data
+shell ionic g c lookup-data
+rename _lookup.scss_ _lookup-data.scss
+shell mv _lookup.scss_\ _lookup-data.scss _lookup-data.scss
+shell ionic g s lookup-data
+open_with%spacea
+shell ionic g m filter-toolbar
+shell ionic g c filter-toolbar
+rename mark_may-23-2022_to_may-27-2022.txt
+search fea
+search pages
+shell ionig c page pm-detail-meter-based
+shell ionic g page pm-detail-meter-based
+shell ng g s dashboard
+shell ng g m reports-products
+shell ng g c reports-products --flat
+rename reports-sales-routing.module.ts reports-products-routing.module.ts
+rename reports-products-routing.module.ts
+shell mkdir interceptors
+shell ng g interceptor api-url
+shell ionic g interceptor api-url
+shell ionic g s api-url
+rename api-url.interceptor.spec.ts
+rename api-url.interceptor.ts
+search mark
+shell mv nvim nvimxx
+shell mv nvim_ nvim
+search main
+search vet
+search vetmate
+search other
+search co
+open_with nvim
+shell touch my_winbar.lua
+search ranger
+e
+delete

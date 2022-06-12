@@ -1,0 +1,54 @@
+#-------------------------------------
+# Gradients
+#-------------------------------------
+# Backgrounds
+# Background 1: Active task
+rounded = 0
+border_width = 3
+border_sides = T
+background_color = #888888 0
+border_color = #1793d1 100
+background_color_hover = #888888 20
+border_color_hover = #1793d1 100
+background_color_pressed = #888888 20
+border_color_pressed = #1793d1 100
+#-------------------------------------
+# Panel
+panel_items = C:FE
+panel_size = 100% 40
+panel_margin = 0 0
+panel_padding = 0 0 0
+panel_background_id = 7
+wm_menu = 1
+panel_dock = 0
+panel_position = bottom center horizontal
+panel_layer = bottom
+panel_monitor = all
+panel_shrink = 0
+autohide = 0
+autohide_show_timeout = 0.3
+autohide_hide_timeout = 1.5
+autohide_height = 6
+strut_policy = follow_size
+panel_window_name = tint2
+disable_transparency = 0
+mouse_effects = 1
+font_shadow = 0
+mouse_hover_icon_asb = 100 0 10
+mouse_pressed_icon_asb = 100 0 0
+#-------------------------------------
+
+# executor battery
+execp = new
+execp_has_icon = 1
+execp_cache_icon = 1
+execp_icon_w = 35
+execp_icon_h = 35
+execp_padding = 10 4
+execp_command = ~/.mark/config/tint2/scripts/battery.sh
+execp_interval = 10
+execp_monitor = 1
+execp_continuous = 0
+execp_markup = 1
+#-------------------------------------
+
