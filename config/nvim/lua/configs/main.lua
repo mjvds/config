@@ -36,6 +36,7 @@ U.map('n', '<Left>', ':vertical resize -5<cr>', { silent = true })
 U.map('n', '<Up>', ':5winc -<cr>', { silent = true })
 U.map('n', '<Down>', ':5winc +<cr>', { silent = true })
 U.map('n', '<leader>gb', ":lua require'git.blame'.blame()<cr>", { silent = true })
+U.map('n', '<leaver>p', ":Prettier<cr>", { silent = true })
 
 U.map('i', 'jj', '<Esc>')
 

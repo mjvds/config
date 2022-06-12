@@ -34,7 +34,7 @@ local function on_attach(client, bufnr)
   local opt = {}
   api.nvim_buf_create_user_command(bufnr, 'LspNextDiagnostic', function() require'lsp.diagnostic'.goto_next() end, opt)
   api.nvim_buf_create_user_command(bufnr, 'LspPreviousDiagnostic', function() require'lsp.diagnostic'.goto_prev() end, opt)
-  api.nvim_buf_create_user_command(bufnr, 'LspShowFixes', function() require'lsp.codeaction'.get_fixes() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspShowFixes', function() vim.lsp.buf.code_action() end, opt)
   api.nvim_buf_create_user_command(bufnr, 'LspQuickFixWindowError', function() require'lsp.diagnostic'.show_quickfix_window() end, opt)
   api.nvim_buf_create_user_command(bufnr, 'LspQuickFixWindowHint', function() require'lsp.diagnostic'.show_quickfix_window(0, 4) end, opt)
   api.nvim_buf_create_user_command(bufnr, 'LspRename', function() vim.lsp.buf.rename() end, opt)
@@ -57,13 +57,14 @@ local function on_attach(client, bufnr)
       require'lsp.diagnostic'.show_line_diagnostics()
     end,
   })
-  -- api.nvim_create_autocmd('User', {
-  --   pattern = "DiagnosticsChanged",
-  --   group = myGroupId,
-  --   callback = function()
-  --     require'lsp.diagnostic'.update_quickfix_buf()
-  --   end,
-  -- })
+  api.nvim_create_autocmd('User', {
+    pattern = "DiagnosticsChanged",
+    group = myGroupId,
+    callback = function()
+      require'lsp.diagnostic'.update_quickfix_buf()
+    end,
+  })
+  -- api.nvim_buf_create_user_command(bufnr, 'LspShowFixes', function() require'lsp.codeaction'.get_fixes() end, opt)
 
   api.nvim_set_var(var.qf_buf_target, 0)
   api.nvim_set_var(var.qf_severity, 0)
@@ -93,10 +94,8 @@ end
 
 local SERVERS = { "jsonls", "omnisharp", "tsserver" } -- , "angularls" }
 function M.configure()
-  -- vim.lsp.set_log_level 'trace'
   for _, server in ipairs(SERVERS) do
     local config = require('lsp.servers.' .. server)
-    local filetypes = vim.fn.get(config, 'filetypes', config.filestypes)
     config.on_attach = on_attach
     nvim_lsp[server].setup(config)
   end

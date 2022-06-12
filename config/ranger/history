@@ -1,7 +1,3 @@
-shell ionic g s dashboard
-shell ionic g c order-form-payment
-rename vetmate_update
-filter qq
 d
 search util
 shell touch checklist.calculation.ts
@@ -43,8 +39,12 @@ search vet
 search vetmate
 search other
 search co
-open_with nvim
 shell touch my_winbar.lua
 search ranger
 e
+shell ng g page admin-reports-sales
+shell ng g page admin-reports-orders
+shell open_with nvim
+open_with nvim
+de
 delete
