@@ -4,6 +4,10 @@ local var = require'lsp.var'
 local U = require 'utils'
 local M = {}
 
+local myGroupId = vim.api.nvim_create_augroup("MyGroup", {
+  clear = false
+})
+
 local function on_attach(client, bufnr)
   U.set_opt('o', 'pumheight', 15)
   U.set_opt('o', 'completeopt', 'menu,menuone')
@@ -27,23 +31,40 @@ local function on_attach(client, bufnr)
     border = "single"
   })
 
-  api.nvim_command [[command! LspNextDiagnostic lua require'lsp.diagnostic'.goto_next()]]
-  api.nvim_command [[command! LspPreviousDiagnostic lua require'lsp.diagnostic'.goto_prev()]]
-  api.nvim_command [[command! LspShowFixes lua require'lsp.codeaction'.get_fixes()]]
-  api.nvim_command [[command! LspQuickFixWindowError lua require'lsp.diagnostic'.show_quickfix_window()]]
-  api.nvim_command [[command! LspQuickFixWindowHint lua require'lsp.diagnostic'.show_quickfix_window(0, 4)]]
-  api.nvim_command [[command! LspRename lua vim.lsp.buf.rename()]]
-  api.nvim_command [[command! LspSignatureHelp lua vim.lsp.buf.signature_help()]]
-  api.nvim_command [[command! LspDefinition lua vim.lsp.buf.definition()]]
-  api.nvim_command [[command! LspHover lua vim.lsp.buf.hover()]]
-  api.nvim_command [[command! LspImplementation lua vim.lsp.buf.implementation()]]
-  api.nvim_command [[command! LspTypeDefinition lua vim.lsp.buf.type_definition()]]
-  api.nvim_command [[command! LspReferences lua vim.lsp.buf.references()]]
-  api.nvim_command [[command! LspDocumentSymbol lua vim.lsp.buf.document_symbol()]]
-  api.nvim_command [[command! LspCompleteItemImport "lua require'lsp.completion'.resolve_completed_item()"]]
-  api.nvim_command [[command! LspOrganizeImports lua require'lsp.codeaction'.organize_imports()]]
-  api.nvim_command [[autocmd CursorMoved <buffer> lua require'lsp.diagnostic'.show_line_diagnostics()]]
-  api.nvim_command [[autocmd! User DiagnosticsChanged lua require'lsp.diagnostic'.update_quickfix_buf()]]
+  local opt = {}
+  api.nvim_buf_create_user_command(bufnr, 'LspNextDiagnostic', function() require'lsp.diagnostic'.goto_next() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspPreviousDiagnostic', function() require'lsp.diagnostic'.goto_prev() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspShowFixes', function() vim.lsp.buf.code_action() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspQuickFixWindowError', function() require'lsp.diagnostic'.show_quickfix_window() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspQuickFixWindowHint', function() require'lsp.diagnostic'.show_quickfix_window(0, 4) end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspRename', function() vim.lsp.buf.rename() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspSignatureHelp', function() vim.lsp.buf.signature_help() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspDefinition', function() vim.lsp.buf.definition() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspHover', function() vim.lsp.buf.hover() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspImplementation', function() vim.lsp.buf.implementation() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspTypeDefinition', function() vim.lsp.buf.type_definition() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspReferences', function() vim.lsp.buf.references() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspDocumentSymbol', function() vim.lsp.buf.document_symbol() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspCompleteItemImport', function() require'lsp.completion'.resolve_completed_item() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspOrganizeImports', function() require'lsp.codeaction'.organize_imports() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspOrganizeImports', function() require'lsp.codeaction'.organize_imports() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspOrganizeImports', function() require'lsp.codeaction'.organize_imports() end, opt)
+  api.nvim_buf_create_user_command(bufnr, 'LspOrganizeImports', function() require'lsp.codeaction'.organize_imports() end, opt)
+  api.nvim_create_autocmd('CursorMoved', {
+    pattern = "*",
+    group = myGroupId,
+    callback = function()
+      require'lsp.diagnostic'.show_line_diagnostics()
+    end,
+  })
+  api.nvim_create_autocmd('User', {
+    pattern = "DiagnosticsChanged",
+    group = myGroupId,
+    callback = function()
+      require'lsp.diagnostic'.update_quickfix_buf()
+    end,
+  })
+  -- api.nvim_buf_create_user_command(bufnr, 'LspShowFixes', function() require'lsp.codeaction'.get_fixes() end, opt)
 
   api.nvim_set_var(var.qf_buf_target, 0)
   api.nvim_set_var(var.qf_severity, 0)
@@ -71,9 +92,8 @@ local function on_attach(client, bufnr)
 
 end
 
-local SERVERS = { "jsonls", "omnisharp", "tsserver", "angularls" }
+local SERVERS = { "jsonls", "omnisharp", "tsserver" } -- , "angularls" }
 function M.configure()
-  -- vim.lsp.set_log_level 'trace'
   for _, server in ipairs(SERVERS) do
     local config = require('lsp.servers.' .. server)
     config.on_attach = on_attach

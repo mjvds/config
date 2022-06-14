@@ -30,4 +30,3 @@ C('hi WinSeparator guibg=none guifg=gray')
 
 require 'statusline.my_statusline'
 require 'tabline.tabline'
-require 'statusline.my_winbar'

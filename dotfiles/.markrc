@@ -20,6 +20,7 @@ alias nvim="nvim"
 alias v="nvim" #  
 alias vimconf="nvim ~/.config/nvim/init.vim"
 alias ranger="ranger -r ~/.mark/config/ranger"
+alias enable-keychron="echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode"
 
 black='\033[0;30m'
 red='\033[0;31m'

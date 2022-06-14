@@ -25,7 +25,7 @@ local cmd = { bin_name, unpack(args) }
 return {
   default_config = {
     cmd = cmd,
-    filetypes = { 'html' },
+    filetypes = { 'typescript', 'html' },
     -- Check for angular.json or .git first since that is the root of the project.
     -- Don't check for tsconfig.json or package.json since there are multiple of these
     -- in an angular monorepo setup.
@@ -33,6 +33,7 @@ return {
   },
   on_new_config = function(new_config, new_root_dir)
     local new_probe_dir = get_probe_dir(new_root_dir)
+    print(new_probe_dir)
 
     -- We need to check our probe directories because they may have changed.
     new_config.cmd = {

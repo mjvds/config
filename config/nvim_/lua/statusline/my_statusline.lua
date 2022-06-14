@@ -99,16 +99,3 @@ end
 C('set laststatus=3')
 C('autocmd WinEnter,BufEnter * setlocal statusline=%!v:lua.my_statusline()')
 C('autocmd WinLeave,BufLeave * setlocal statusline=%!v:lua.my_statusline(1)')
--- local pattern = "*"
--- vim.api.nvim_create_autocmd({"WinEnter", "BufEnter"}, {
---   pattern = pattern,
---   callback = function()
---     vim.opt_local.statusline = my_statusline(false)
---   end
--- })
--- vim.api.nvim_create_autocmd({"WinLeave", "BufLeave"}, {
---   pattern = pattern,
---   callback = function()
---     vim.opt_local.statusline = my_statusline(true)
---   end
--- })

@@ -87,14 +87,4 @@ function M.ends_with(str, ending)
   return ending == "" or str:sub(-#ending) == ending
 end
 
-function M.includes(tab, val)
-  for index, value in ipairs(tab) do
-    if value == val then
-      return true
-    end
-  end
-
-  return false
-end
-
 return M

@@ -91,8 +91,7 @@ return {
               "refactor.inline",
               "refactor.rewrite",
               "source",
-              "source.organizeImports",
-              "source.fixAll"
+              "source.organizeImports"
             }
           }
         }

@@ -7,6 +7,7 @@ C('syntax on')
 C('filetype plugin indent on')
 C('set clipboard=unnamedplus')
 
+
 -- U.set_opt('w', 't_Co', '256')
 U.set_opt('o', 'background', 'dark')
 U.set_opt('o', 'encoding', 'utf-8')
@@ -29,14 +30,12 @@ require 'configs.menu';
 -- require 'configs.highlights';
 
 C('set noswapfile')
-C('set cmdheight=0')
 
 U.map('n', '<Right>', ':vertical resize +5<cr>', { silent = true })
 U.map('n', '<Left>', ':vertical resize -5<cr>', { silent = true })
 U.map('n', '<Up>', ':5winc -<cr>', { silent = true })
 U.map('n', '<Down>', ':5winc +<cr>', { silent = true })
 U.map('n', '<leader>gb', ":lua require'git.blame'.blame()<cr>", { silent = true })
-U.map('n', '<leaver>p', ":Prettier<cr>", { silent = true })
 
 U.map('i', 'jj', '<Esc>')
 

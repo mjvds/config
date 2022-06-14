@@ -1,35 +1,14 @@
-local util = require 'lspconfig.util'
-local U = require 'utils'
-local bin_path = 'typescript-language-server'
-local npm_bin_path = vim.fn.exepath('npm')
+local pid = vim.fn.getpid()
+local os = require 'os'
+local user = os.getenv('USER')
+local omnisharp_bin = "/home/" .. user .. "/.mark/lsp/omnisharp/run"
+local cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid), "--verbose", "Debug" };
 return {
-  cmd = {
-    bin_path,
-    "--stdio"
-  },
-  root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
-  trace = "verbose",
-  init_options = {
-    hostInfo = "neovim",
-    npmLocation	= npm_bin_path,
-    logVerbosity = "off",
-    preferences = {
-      allowIncompleteCompletions = false,
-      disableSuggestions = false,
-      includeCompletionsWithInsertText = false,
-    },
-    completions = {
-      completeFunctionCalls = true
-    }
-  },
-  filestypes = {
-    'javascript',
-    'javascriptreact',
-    'javascript.jsx',
-    'typescript',
-    'typescriptreact',
-    'typescript.tsx',
-  },
+  cmd = cmd;
+  on_new_config = function(new_config,new_root_dir)
+    print("new configuration loaded: " .. new_root_dir)
+    new_config.cmd = cmd
+  end,
   capabilities = {
     offsetEncoding = { "utf-8", "utf-16" },
     textDocument = {
@@ -37,10 +16,9 @@ return {
         completionItem = {
           commitCharactersSupport = false,
           deprecatedSupport = false,
-          documentationFormat = { "plaintext", "markdown" },
+          documentationFormat = { "plaintext" },
           preselectSupport = false,
-          snippetSupport = false,
-          insertReplaceSupport = true,
+          snippetSupport = false
         },
         completionItemKind = {
           valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 }
@@ -57,6 +35,9 @@ return {
         symbolKind = {
           valueSet = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
         }
+      },
+      documentFormattingProvider = {
+        dynamicRegistration = false,
       },
       hover = {
         contentFormat = { "plaintext" },
@@ -91,11 +72,15 @@ return {
               "refactor.inline",
               "refactor.rewrite",
               "source",
-              "source.organizeImports",
-              "source.fixAll"
+              "source.organizeImports"
             }
           }
         }
+      }
+    },
+    workspace = {
+      executeCommand = {
+        dynamicRegistration = false
       }
     }
   }

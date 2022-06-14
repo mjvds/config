@@ -115,17 +115,17 @@ local function startup()
     end
   }
 
-  -- use {
-  --   'mfussenegger/nvim-dap',
-  --   opt = true,
-  --   ft = { "cs", "javascript" },
-  --   config = function()
-  --     if not vim.wo.diff then
-  --       -- require('dap.ext.vscode').load_launchjs()
-  --       require 'plugins.nvim-dap.nvim-dap'.configure()
-  --     end
-  --   end
-  -- }
+  use {
+    'mfussenegger/nvim-dap',
+    opt = true,
+    ft = { "cs", "javascript" },
+    config = function()
+      if not vim.wo.diff then
+        -- require('dap.ext.vscode').load_launchjs()
+        require 'plugins.nvim-dap.nvim-dap'.configure()
+      end
+    end
+  }
 
   use {
     'APZelos/blamer.nvim',
